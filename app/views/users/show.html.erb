@@ -1,0 +1,7 @@
+<%= @user.name %><br>
+<%= @user.email %><br>
+<% @user.reminders.each do |r| %>
+  <%= r.title %><br>
+  <%= r.description %><br>
+<% end %>
+<%= link_to "New Reminder", new_user_reminder_path(@user) %>
